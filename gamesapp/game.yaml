@@ -9,6 +9,8 @@ handlers:
   script: main.app
 - url: /.*
   static_dir: battleship.html
+- url: /js
+  static_dir: static/js
 
 
 
