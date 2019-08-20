@@ -65,6 +65,7 @@
         var gridBorderColor = '#7788AA';
         var largeStroke = 5;
         var smallStroke = 2;
+        var first = true;
 
         // position of falling shape
         var fallingShapeRow;
@@ -265,6 +266,8 @@
             var topscore = 0;
             var gameOver = true;
 
+
+
             this.reset = function () {
                 this.setTopscore();
                 level = lines = score = 0;
@@ -362,19 +365,26 @@
 
             if (scoreboard.isGameOver()) {
                 drawStartScreen();
-            } else {
+              }
+             else {
                 drawFallingShape();
+                first = false;
             }
         }
 
-        function drawStartScreen() {
+        function drawStartScreen(drawEndText) {
             g.font = mainFont;
 
             fillRect(titleRect, titlebgColor);
             fillRect(clickRect, titlebgColor);
 
             g.fillStyle = textColor;
-            g.fillText('Tetris', titleX, titleY);
+            console.log(first);
+            if (first == true){
+            g.fillText('Tetris', titleX, titleY);}
+              else{
+              g.fillText('gameover', titleX, titleY);
+            }
 
             g.font = smallFont;
             g.fillText('click to start', clickX, clickY);
