@@ -20,8 +20,16 @@ class EnterInfoHandler2(webapp2.RequestHandler):
     def post(self):
         template = the_jinja_env.get_template("tetris.html")
         self.response.write(template.render())
+class EnterInfoHandler3(webapp2.RequestHandler):
+    def get(self):
+        template = the_jinja_env.get_template("tictactoe.html")
+        self.response.write(template.render())
+    def post(self):
+        template = the_jinja_env.get_template("tictactoe.html")
+        self.response.write(template.render())
 
 app = webapp2.WSGIApplication([
     ('/', EnterInfoHandler),
     ('/tetris.html', EnterInfoHandler2),
+    ('/tictactoe.html' EnterInfoHandler3),
 ], debug=True)
