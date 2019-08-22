@@ -5,9 +5,13 @@
 <title>Mini Games</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <style>
 <br>
 button{ position:absolute;left:50px;top:60px;width:80px;length:60px;}
+
 * {
   box-sizing: border-box;
 }
@@ -48,9 +52,10 @@ article {
   padding-left: 150px;
   padding-right: 150px;
 /*  background-color: #00FF;*/
-  height: 300px; /* only for demonstration, should be removed */
+  height: 300px;
   position: absolute;
-  top: 33%;
+  top: 17.5%;
+
 
 }
 
@@ -70,6 +75,7 @@ section:after {
   }
 }
 /* DROPDOWN CSS BOTTON */
+
 .dropbtn {
   background-color: #4CAF50;
   color: white;
@@ -106,6 +112,53 @@ section:after {
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
 }
+ /* this is for the comment box */
+  .div_move {
+    position: absolute;
+    top: 65%;
+
+  }
+
+
+  .row.content {height: 1500px}
+
+
+  .sidenav {
+    background-color: #f1f1f1;
+    height: 100%;
+
+  }
+
+
+
+  footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+
+
+  }
+
+
+  @media screen and (max-width: 767px) {
+    .sidenav {
+      height: auto;
+      padding: 15px;
+      position: absolute;
+      bottom: 70px;
+      left:954px;
+      right: 30px;
+      width: 80px;
+      height:50px;
+      line-height: 1000px;
+      text-align: center;
+      background: white;
+
+    }
+    .row.content {height: auto;}
+
+  }
+
 </style>
 </head>
 <body>
@@ -119,8 +172,8 @@ section:after {
     <div class="dropdown">
       <button class="dropbtn">Select Game</button>
       <div class="dropdown-content">
-        <a href="tetris.html">Tetris</a>
-        <a href="tictactoe.html">Tic Tac Toe</a>
+        <a href="/tetris">Tetris</a>
+        <a href="/tictactoe">Tic Tac Toe</a>
         <a href="https://www.miniclip.com/games/vex-4/en/">Vex 4</a>
         <a href="https://www.miniclip.com/games/8-ball-pool-multiplayer/en/#t-w-c-H">8 Ball pool</a>
         <a href="https://supermariobros.io/">Super Mario Bros</a>
@@ -130,15 +183,31 @@ section:after {
     </div>
   </nav>
 
-  <img style=" position: absolute; top: 276px;" src="https://professionalmorondotcom.files.wordpress.com/2016/01/yellow.jpg?w=799&h=620" width="1424px" height="302px">
-    <center><article position: absolute;left: 0px; top: opx;><h1>Description: </h1>
+  <img style=" position: absolute; top: 186px;" src="https://professionalmorondotcom.files.wordpress.com/2016/01/yellow.jpg?w=799&h=620" width="1440px" height="318px">
+    <bold><center><article position: absolute;left: 0px; top: opx;><h4><br>Description:</h4></bold>
     <p style = "font-size:18px"><strong>Tetris</strong>: Slot the blocks falling into the correct spaces between to create a row and earn points.<br> Stack 4 rows to earn maximum points called a tetris!<br>
     <strong>Tic Tac Toe</strong>: The player who succeeds in placing three or their marks in a horizontal,vertical or diagonal row wins the game!<br>
     <strong>Vex 4</strong>: Jump across gaps and through dangerous obsticles to reach the end and win. There are multiple levels to complete which allows for alot of play time!<br>
     <strong>8 Ball pool</strong>: Hit the striped or solid balls(decided by whoever hits the first ball in) into the 6 holes available.<br> Knocking all your type of ball in plus the 8 ball earns you a victory royale!<br>
     <strong>Super Mario Bros</strong>: Play as super mario and jump though pipes, dodge goombas and other enemies on your way to save the princess mushroom kingdom!<br>
     <strong>Crossy Road</strong>: Choose a character to jump across streets and other places without getting hit by the cars. If you stay in one spot too long though the eagle will catch you!</article></center></p>
+    <div class ="div_move"> <!-- is add to move the coment box -->
+    <h4>Leave a Comment:</h4>
+      <form role="form">
+        <div class="form-group">
+          <textarea class="form-control" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      <br><br>
 
+      <p><span class="badge"></span> Comments:</p><br>
+
+      <div class="row">
+        <div class="col-sm-2 text-center">
+        </div>
+        <div class="col-sm-10">
+        </div>
 </section>
 
 </body>

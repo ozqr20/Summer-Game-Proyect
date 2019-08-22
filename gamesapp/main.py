@@ -30,6 +30,6 @@ class EnterInfoHandler3(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     ('/', EnterInfoHandler),
-    ('/tetris.html', EnterInfoHandler2),
-    ('/tictactoe.html' EnterInfoHandler3),
+    ('/tetris', EnterInfoHandler2),
+    ('/tictactoe', EnterInfoHandler3),
 ], debug=True)
